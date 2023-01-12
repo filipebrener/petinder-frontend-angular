@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.js",
-    "build": "ng build  && npm run delete && npm run move",
+    "build": "ng build --base-href ./ && npm run delete && npm run move",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "delete": "rm -rf ../*.html && rm -rf ../*.js && rm -rf ../*.css && rm -rf ../*.txt",
-    "move": "cp ./dist/petinder/* .."
+    "move": "cp -r ./dist/petinder/* .."
   },
   "private": true,
   "dependencies": {
