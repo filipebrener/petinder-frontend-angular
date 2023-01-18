@@ -1,0 +1,60 @@
+@font-face {
+    font-family: bernhardt;
+    src: url(../../assets/fonts/Bernhardt.otf) format("opentype");
+}
+
+.main-toolbar {
+    background: rgb(238,174,202);
+    background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #006aff 100%);
+}
+
+.main-toolbar > .redirect-login-btn{
+    position: absolute;
+    right: 10px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 20px;
+    color: black;
+    background-color: white;
+}
+
+div.paw-background {
+    position: absolute;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)), url("../../assets/background.jpg");
+}
+
+div.home-info{
+    z-index: 1;
+    text-align: center;
+}
+
+div.home-info > h1 {
+    margin-top: 15%;
+    margin-bottom: 65px;
+    font-size: 60px;
+    font-family: bernhardt;
+}
+
+div.home-info > button {
+    border-radius: 40px;
+    font-size: 10px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #006aff   ;
+}
+
+div.blur{
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}
+
+.logo:hover { cursor: pointer }
