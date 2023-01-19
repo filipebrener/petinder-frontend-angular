@@ -1,4 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@font-face {
+    font-family: bernhardt;
+    src: url(assets/fonts/Bernhardt.otf) format("opentype");
+}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: bernhardt, Roboto, "Helvetica Neue", sans-serif; }
+
+
+.main-toolbar {
+    z-index: 2;
+    top: 0px;
+    position: sticky;
+    color: aliceblue;
+    background: rgb(238,174,202);
+    background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #4758B8 100%);
+}
+
+div.paw-background {
+    margin-top: 60px;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)), url("assets/background.jpg");
+}
+
+
+div.blur{
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}
+
+.logo:hover { cursor: pointer }
+
+.mat-mdc-form-field-infix {
+    width: 100% !important;
+}

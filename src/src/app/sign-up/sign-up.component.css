@@ -1,0 +1,35 @@
+mat-card{
+    margin: 2em auto;
+    align-items: center;
+    padding: 30px;
+    width:50%;
+}
+
+mat-error{
+    position:absolute;
+}
+
+.full-width{
+    width: 100%;
+}
+
+h1{
+    font-family: bernhardt;
+}
+
+.inline-inputs-form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inline-inputs-form > mat-form-field{
+    width: 49%;
+}
+
+mat-card-actions > button{
+    margin: 10px;
+}
+
+.input-with-suffix-button{
+    height: 60%;
+}
