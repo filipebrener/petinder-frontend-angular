@@ -2,15 +2,12 @@ import { ClientService } from './../services/client.service';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormValidatorsService } from '../services/form-validators.service'
-import { provideNgxMask } from 'ngx-mask';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css'],
-  providers: [
-    provideNgxMask()
-  ]
+  providers: []
 })
 export class SignUpComponent{
 
