@@ -14,7 +14,7 @@
 
             <mat-form-field class="full-width" >
                 <mat-label>Nome de usuário</mat-label>
-                <input matInput formControlName="username">
+                <input matInput formControlName="username"  mask="@A*">
                 <mat-error >O nome de usuário &eacute; obrigat&oacute;rio!</mat-error>
             </mat-form-field>
 
@@ -44,13 +44,13 @@
 
             <mat-form-field class="full-width" >
                 <mat-label>CPF</mat-label>
-                <input matInput formControlName="cpf">
+                <input matInput formControlName="cpf" mask="000.000.000-00">
                 <mat-error>O CPF &eacute; obrigat&oacute;rio!</mat-error>
             </mat-form-field>
             
             <mat-form-field class="full-width" >
                 <mat-label>Celular*</mat-label>
-                <input type="text" matInput formControlName="celNumber"  >
+                <input type="text" matInput formControlName="celNumber" mask="(00) 0 0000-0000" >
                 <mat-error>O número de celular &eacute; obrigat&oacute;rio!</mat-error>
             </mat-form-field>
             
