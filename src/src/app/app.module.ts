@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +31,8 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
@@ -36,7 +40,10 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     HttpClientModule,
     NgxMaskModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule,
+    {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

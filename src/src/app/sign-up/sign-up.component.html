@@ -20,6 +20,31 @@
 
             <div class="inline-inputs-form">
 
+                <mat-form-field appearance="fill" class="full-width">
+                    <mat-label>Data de nascimento</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="birthDate" [max]="maxDate">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error *ngIf="form.get('birthDate')?.hasError('required')">A data de nascimento &eacute; obrigat&oacute;rio!</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="full-width">
+                    <mat-label>Data de nascimento</mat-label>
+                    <input matInput formControlName="birthDate" mask="00/00/0000">
+                    <mat-error *ngIf="form.get('birthDate')?.hasError('required')">A data de nascimento &eacute; obrigat&oacute;rio!</mat-error>
+                </mat-form-field>
+
+
+            </div>
+
+            <mat-form-field class="full-width" >
+                <mat-label>CPF</mat-label>
+                <input matInput formControlName="cpf" mask="000.000.000-00">
+                <mat-error>O CPF &eacute; obrigat&oacute;rio!</mat-error>
+            </mat-form-field>
+
+            <div class="inline-inputs-form">
+
                 <mat-form-field >
                     <mat-label>Email*</mat-label>
                     <input matInput formControlName="email">
@@ -41,12 +66,6 @@
                 </mat-form-field>   
 
             </div>
-
-            <mat-form-field class="full-width" >
-                <mat-label>CPF</mat-label>
-                <input matInput formControlName="cpf" mask="000.000.000-00">
-                <mat-error>O CPF &eacute; obrigat&oacute;rio!</mat-error>
-            </mat-form-field>
             
             <mat-form-field class="full-width" >
                 <mat-label>Celular*</mat-label>

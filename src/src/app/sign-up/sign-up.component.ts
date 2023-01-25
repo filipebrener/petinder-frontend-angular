@@ -17,12 +17,20 @@ export class SignUpComponent{
   protected isToShowPassword: boolean
   protected isToShowConfirmationPassword: boolean
 
-
   protected celNumberMask : String
+  
+  protected maxDate: Date;
 
   constructor(
     private formBuilder : FormBuilder,
     private _clientService : ClientService){
+
+      const today = new Date();
+      this.maxDate = new Date(
+        today.getFullYear() - 18,
+        today.getMonth(),
+        today.getDate()
+      );
 
     this.celNumberMask = '(00) 0000-0000'
 
@@ -35,6 +43,7 @@ export class SignUpComponent{
       username:[null, Validators.required],
       password:[null, Validators.required],
       cpf:[null, Validators.required],
+      birthDate:[null, Validators.required],
       celNumber:[null, Validators.compose([
         Validators.required 
       ])],
